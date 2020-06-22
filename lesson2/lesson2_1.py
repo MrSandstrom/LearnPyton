@@ -21,13 +21,14 @@ my_string = "Hello again"
 print(my_string)
 
 
-my_integer_list = [1,2,3,4,5,6,7,8,9]
+
+my_integer_list = [1,2,3,4,5]
 for item in my_integer_list:
     print(item)
 
 
 index = 3
 
-while (index < 10):
+while (index < 5):
     print(index)
     index +=1
