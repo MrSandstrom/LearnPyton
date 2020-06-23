@@ -1,0 +1,67 @@
+
+Inlämningsuppgift
+The student class
+
+Now that we have covered the basics in python I want you to make a simple program. 
+The program is a simple console program that takes input from the user and executes depending on what choice the user selects.
+
+I want you to make a class called Student. 
+The student class must have two properties/variables, first name and last name. 
+Theese variables must be able to be changed upon the users input through functions. 
+You must also be able to fetch the name of the student.
+
+The second part of this assignment is to create a system that can take input from the user via the terminal. 
+The system should not be a part of the student class. The program should only exit when the user wants it to exit.
+The third part of this assigmnet is to expand the system to be able to add, remove and edit the students. 
+
+ 
+
+Example of the user interface:
+
+--- Select input ---
+
+1. Add Student.
+
+2. View Students.
+
+3. Edit Student.
+
+4. Quit.
+
+ 
+
+--- Select input ---
+
+1. View name.
+
+2. Change name.
+
+3. Remove Student.
+
+4. Quit.
+
+ 
+
+Hints:
+
+Use a while loop for the program flow. 
+Use try except for handling input or casting errors. 
+First make the system so it can handle a single student. 
+When everything works, expand it so it can handle multiple students. 
+Use a list or a dictionary to store the students. 
+
+ 
+Hand in the assignment by pasting the code here in the text area.
+
+
+
+
+
+
+
+
+
+
+
+
+
