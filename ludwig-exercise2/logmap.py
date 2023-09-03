@@ -1,7 +1,7 @@
 def logmap(r,x):    
-    print (r*x*(1-x))
+    return (r*x*(1-x))
 
-logmap(float(3.9),float(0.20))
+print(logmap(float(3.9),float(0.20)))
 
 #--------------------------------------------------------------------
 
