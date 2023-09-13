@@ -42,10 +42,12 @@ def run(src_path=None):
 		out = sys.stdout.getvalue()
 		sys.stdout = saved
 		return out
-
+    
 	def tokenize(lines):
 		pass
-    
+
+	def countWords(words, stopWords):
+		pass
 
 	if hasattr(wordfreq, "tokenize"):
 		fun_count = fun_count + 1
@@ -53,27 +55,27 @@ def run(src_path=None):
 		test(wordfreq.tokenize, [""], [])
 		test(wordfreq.tokenize, ["   "], [])
 		test(wordfreq.tokenize, ["This is a simple sentence"], ["this","is","a","simple","sentence"])
-		#test(wordfreq.tokenize, ["I told you!"], ["i","told","you","!"])
-		#test(wordfreq.tokenize, ["The 10 little chicks"], ["the","10","little","chicks"])
-		#test(wordfreq.tokenize, ["15th anniversary"], ["15","th","anniversary"])
-		#test(wordfreq.tokenize, ["He is in the room, she said."], ["he","is","in","the","room",",","she","said","."])
+		test(wordfreq.tokenize, ["I told you!"], ["i","told","you","!"])
+		test(wordfreq.tokenize, ["The 10 little chicks"], ["the","10","little","chicks"])
+		test(wordfreq.tokenize, ["15th anniversary"], ["15","th","anniversary"])
+		test(wordfreq.tokenize, ["He is in the room, she said."], ["he","is","in","the","room",",","she","said","."])
 	else:
 		print("tokenize is not implemented yet!")
 
 	if hasattr(wordfreq, "countWords"):
 		fun_count = fun_count + 1
-		#test(wordfreq.countWords, ([],[]), {})
-		#test(wordfreq.countWords, (["clean","water"],[]), {"clean":1,"water":1})
-		#test(wordfreq.countWords, (["clean","water","is","drinkable","water"],[]), {"clean":1,"water":2,"is":1,"drinkable":1})
-		#test(wordfreq.countWords, (["clean","water","is","drinkable","water"],["is"]), {"clean":1,"water":2,"drinkable":1})
+		test(wordfreq.countWords, ([],[]), {})
+		test(wordfreq.countWords, (["clean","water"],[]), {"clean":1,"water":1})
+		test(wordfreq.countWords, (["clean","water","is","drinkable","water"],[]), {"clean":1,"water":2,"is":1,"drinkable":1})
+		test(wordfreq.countWords, (["clean","water","is","drinkable","water"],["is"]), {"clean":1,"water":2,"drinkable":1})
 	else:
 		print("countWords is not implemented yet!")
 
 	if hasattr(wordfreq, "printTopMost"):
 		fun_count = fun_count + 1
-		#test(printTopMost,({},10),"")
-		#test(printTopMost,({"horror": 5, "happiness": 15},0),"")
-		#test(printTopMost,({"C": 3, "python": 5, "haskell": 2, "java": 1},3),"python                  5\nC                       3\nhaskell                 2\n")
+		test(printTopMost,({},10),"")
+		test(printTopMost,({"horror": 5, "happiness": 15},0),"")
+		test(printTopMost,({"C": 3, "python": 5, "haskell": 2, "java": 1},3),"python                  5\nC                       3\nhaskell                 2\n")
 	else:
 		print("printTopMost is not implemented yet!")
 
